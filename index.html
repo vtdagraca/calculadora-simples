@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Calculadora</title>
+        <style>
+            body {
+            background-color: darkgrey;
+            text-align: center;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            color: rgb(0, 47, 255);
+            text-decoration:none
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h2>Calculadora (teste)</h2>
+            <input id="calculo">
+            <input id="calculo2">
+        </div>
+        <br>
+        <div>
+            <button onclick="somar()">Somar</button>
+            <button onclick="diminuir()">Diminuir</button>
+        </div>
+            <p id="resultado">(resultado)</p>
+
+    <script>
+        function somar () {
+            var n1 = parseFloat (document.getElementById("calculo").value);
+            console.log (n1)
+            var n2 = parseFloat (document.getElementById("calculo2").value); 
+            var resultado = n1 + n2;
+
+                document.getElementById ("resultado").innerHTML = resultado;
+            
+            console.log (n1);
+            console.log (n2);
+            console.log (resultado);
+        }
+
+        function diminuir () {
+            var n1 = parseFloat (document.getElementById("calculo").value);
+            var n2 = parseFloat (document.getElementById("calculo2").value); 
+            var resultado = n1 - n2;
+
+            document.getElementById ("resultado").innerHTML = resultado;
+
+            console.log (n1);
+            console.log (n2);
+            console.log (resultado);
+
+        }
+    </script>
+    
+    </body>    
+</html>
